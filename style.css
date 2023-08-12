@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(136deg, rgb(162, 162, 214), rgb(163, 201, 201))
+}
+
+#todo-container {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+#date-hour{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    position: absolute;
+    top: 5%;
+
+}
+
+#date-hour p{
+    /* border: 2px solid black; */
+    margin: 10px 10px;
+    width: 400px;
+    font-size: 20px;
+}
+
+#date-hour .time{
+    text-align: right;
+}
+
+#todo-container header{
+    display: flex;
+    position: absolute;
+    top: 15%;
+    /* border: 2px solid black; */
+    width: 60%;
+}
+
+#todo-container header .line{
+    height: 60px;
+    width: 10px;
+    background-color: rgb(59, 52, 49);
+}
+#todo-container header .title{
+    font-size: 45px;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+#todo-container #todo-form{
+    position: absolute;
+    width: 65%;
+    border-top: 2px solid black;
+    margin-bottom: 200px;
+}
+#todo-container #edit-form{
+    position: absolute;
+    width: 65%;
+    border-top: 2px solid black;
+    margin-bottom: 200px;
+}
+
+#todo-container .label{
+    position: relative;
+    top: 20px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+#todo-container .form-control{
+    display: flex;
+    position: relative;
+    top: 40px;
+    width: 100%;
+    /* border: 2px solid black; */
+}
+#todo-container .form-control #todo-input, #edit-input{
+    width: 90%;
+    padding: 10px 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 7px;
+}
+#todo-container .form-control button{
+    width: 40px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+#todo-container .form-control button:hover{
+    background-color: rgb(97, 227, 236);
+}
+#todo-container .form-control #cancel-edit-btn{
+    position: absolute;
+    left: 25%;
+    bottom: -100%;
+    width: 40%;
+    height: 65%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: red;
+    border: none;
+    color: white;
+}
+#todo-container .form-control #cancel-edit-btn:hover{
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+}
+#todo-container .form-control i{
+    font-size: 30px;
+}
+input::placeholder{
+    font-size: 18px;
+}
+input:focus{
+    background-color: rgb(97, 227, 236);
+    color: black;
+}
+
+#todo-container .todo-list{
+    position: absolute;
+    top: 55%;
+    width: 65%;
+}
+#todo-container .todo-list .todo{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    width: 100%;
+    border-top: 2px solid black;
+}
+#todo-container .todo-list .todo h3{
+    margin: 10px 10px;
+    font-size: 20px;
+}
+#todo-container .todo-list .todo span{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    background-color: orangered;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+#todo-container .todo-list .todo button{
+    font-size: 22px;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+#todo-container .todo-list .todo button:hover{
+   border: 2px solid white;
+   background-color: rgb(88, 88, 88);
+}
+
+.done{
+    background-color: green;
+}
+
+.done h3 {
+    color: white;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.done i{
+    color: white;
+}
+
+.hide{
+    display: none;
+}

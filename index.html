@@ -1,0 +1,62 @@
+<!-- Question:
+Create a TODO List app capable of storing your TODOs in localStorage. Add an option to create, delete and access all the TODO’s.
+
+Try to make UI as good as possible -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List App</title>
+    <link rel="stylesheet" href="Ex6.css">
+    <script src="https://kit.fontawesome.com/01e4475068.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="todo-container">
+        <!-- For Date and Time -->
+        <div id="date-hour">
+            <p class="date"></p>
+            <p class="time"></p>
+        </div>
+        <!-- Adding Page Header -->
+        <header>
+            <div class="line"></div>
+            <div class="title">To Do List</div>
+        </header>
+        <!-- Add Todo -->
+        <form action="" id="todo-form">
+            <label for="todo-input" class="label">Add Your Task Here</label>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="Type here about your next task">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <!-- Edit The Todos -->
+        <form action="" id="edit-form" class="hide">
+            <label for="edit-input" class="label">Edit Your Task</label>
+            <div class="form-control">
+                <input type="text" id="edit-input" placeholder="Type here about your next task">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+                <button type="button" id="cancel-edit-btn">Cancel</button>
+            </div>
+
+        </form>
+        <!-- Todo List -->
+        <div class="todo-list" id="todo-list">
+            <div class="todo">
+                <p class="message" style="opacity: 0.7;font-size: 25px;" hidden>Your List is Empty 😞😭</p>
+                <!-- Items will displayed here through JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="Ex6.js"></script>
+</body>
+
+</html>
