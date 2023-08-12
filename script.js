@@ -31,6 +31,7 @@ todoForm.addEventListener("submit", (e) => {
     const inputValue = todoInput.value;
     arr.push(inputValue); // Add index to todo list.
     let index = arr.indexOf(inputValue, 1); // Add index to todo list.
+    localStorage.setItem(arr.indexOf(inputValue),inputValue);
     if (inputValue)
         saveTodo(index, inputValue); //Save Function
 })
